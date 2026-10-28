@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!TYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,23 +7,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <header>
-        
-            <em><h1>Belle Peau</h1></em>
-        <nav>
-            <a href="#accueil">Accueil</a>
-            <a href="#produits">Produits</a>
-            <a href="#apropos">à propos</a>
-            <a href="#avis">à propos</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="logo">
-            <img src="image/SA1.jpeg" alt="Logo Produit">
-           
-        </div>
-    </header>
+    <header class="entete">
+    <em><h1>Belle Peau</h1></em>
 
+    <button
+        class="menu-hamburger"
+        id="menu-hamburger"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false">
+        ☰
+    </button>
+
+    <nav id="menu-navigation">
+        <a href="#accueil">Accueil</a>
+        <a href="#produits">Produits</a>
+        <a href="#apropos">À propos</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="logo">
+        <img src="image/SA1.jpeg" alt="Logo Produit">
+    </div>
+</header>
+    
+   
     <main>
         <section class="accueil" id="accueil">
             <div class="accueil-texte">
@@ -97,30 +106,92 @@
                 </blockquote>
             </div>
         </section>
-         <form id="form-contact" class="formulaire">
-                <input type="text" id="nom" placeholder="Votre nom" required>
-                <input type="tel" id="tel" placeholder="Votre numéro de téléphone" required>
-                <textarea id="message" rows="4" placeholder="Que souhaitez-vous commander ou savoir ?" required></textarea>
-                <button type="submit" class="btn-whatsapp">Envoyer par WhatsApp</button>
-            </form>
+                                   
 
-            <em><h2>Venez découvrir nos produits et laissez votre beauté rayonner !</h2></em>
-            <button id="checkout" class="btn full">Commander</button>
-        </section>
+         <section class="contact-section" id="contact">
 
-    </main>
-    <footer class="pied">
-        <p class="pied-nom">Belle Éclat Cosmétiques</p>
-        <p>Cotonou, Bénin · 01 92 45 08 82</p>
-        <p class="pied-droits">© 2026 Belle Éclat. Tous droits réservés.</p>
-    </footer>
-    <a class="whatsapp-flottant" target="_blank" rel="noopener"
-       href="https://wa.me/2290192450882?text=Bonjour%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20produits."
-       aria-label="Nous écrire sur WhatsApp">
-        WhatsApp
-    </a>
+            <div class="contact-carte">
 
-    <script src="script.js"></script>
+        <p class="contact-surtitre">NOUS SOMMES À VOTRE ÉCOUTE</p>
+
+        <h2>Passons votre commande !</h2>
+
+        <p class="contact-description">
+            Une question ou un produit vous intéresse ?
+            Remplissez le formulaire et notre équipe vous répondra.
+        </p>
+
+        <form id="form-contact" class="formulaire">
+
+            <div class="champs-double">
+                <div class="champ">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom"
+                           placeholder="Ex. : Dossou"
+                           required>
+                </div>
+
+                <div class="champ">
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" id="prenom"
+                           placeholder="Ex. : Rose"
+                           required>
+                </div>
+            </div>
+
+            <div class="champ">
+                <label for="tel">Téléphone</label>
+                <input type="tel" id="tel"
+                       placeholder="Votre numéro de téléphone"
+                       required>
+            </div>
+
+            <div class="champ">
+                <label for="message">Votre commande ou message</label>
+                <textarea id="message" rows="4"
+                          placeholder="Quel produit souhaitez-vous commander ?"
+                          required></textarea>
+            </div>
+
+            <button type="submit" class="btn-whatsapp">
+                Envoyer par WhatsApp
+            </button>
+
+        </form>
+
+        <button id="checkout" class="btn commander-anime">
+            🛍️ Commander maintenant
+        </button>
+
+        <p class="contact-securite">
+            ✨ Merci de faire confiance à Belle Éclat Cosmétiques.
+        </p>
+
+    </div>
+
+</section>
+<footer class="pied">
+    <div class="pied-contenu">
+<div class="pied-contact">
+            
+            <a
+                href="https://wa.me/2290192450882"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pied-whatsapp">
+                Écrivez-nous sur WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+    <div class="pied-bas">
+        <p>© 2026 Belle Éclat Cosmétiques.</p>
+        <p>Votre beauté mérite le meilleur. 💗</p>
+    </div>
+</footer>
+
+<script src="javascrip/script.js"></script>
 
 </body>
 </html>
